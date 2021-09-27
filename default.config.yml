@@ -61,6 +61,7 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - adoptopenjdk/openjdk
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -74,6 +75,7 @@ homebrew_cask_apps:
   - visual-studio-code
   - postman
   - jetbrains-toolbox
+  - adoptopenjdk11
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
