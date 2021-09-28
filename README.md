@@ -135,7 +135,7 @@ Finally, there are a few other preferences and settings added on for various app
 ## Future additions
 
 - Download security software.
-- Setup ssh key.
+- Setup ssh key with ED25519 algorithm.
 
 ## Testing the Playbook
 
