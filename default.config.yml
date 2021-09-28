@@ -80,6 +80,23 @@ mas_installed_apps: []
 mas_email: ""
 mas_password: ""
 
+# See https://github.com/Comcast/ansible-sdkman for usage instructions.
+configure_sdkman: true
+sdkman_update: true
+sdkman_auto_answer: true
+sdkman_install_packages:
+  - { candidate: scala, version: 2.12.15 }
+  - { candidate: scala, version: 2.13.6 }
+sdkman_defaults:
+  scala: 2.13.6
+sdkman_flush_caches_before:
+  - temp
+sdkman_flush_caches_after:
+  - archives
+  - broadcast
+  - candidates
+  - temp
+
 osx_script: "~/.osx --no-restart"
 
 # Install packages from other package managers.
