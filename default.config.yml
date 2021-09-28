@@ -57,12 +57,12 @@ homebrew_installed_packages:
   - wget
   - wrk
   - zsh-history-substring-search
-  - openjdk@11
   - jq
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -76,6 +76,7 @@ homebrew_cask_apps:
   - visual-studio-code
   - postman
   - jetbrains-toolbox
+  - temurin11
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
