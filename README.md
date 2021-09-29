@@ -31,6 +31,39 @@ Forked from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-de
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
+## Included Applications / Configuration (Default)
+
+Take a look at `homebrew_cask_apps` and `homebrew_installed_packages` in [default.config.yml](default.config.yml).
+
+Applications (installed with Homebrew Cask):
+
+- [ChromeDriver](https://sites.google.com/chromium.org/driver/)
+- [Docker](https://www.docker.com/)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Google Chrome](https://www.google.com/chrome/)
+- [Homebrew](http://brew.sh/)
+- [LICEcap](http://www.cockos.com/licecap/)
+- [Slack](https://slack.com/)
+- [Sublime Text](https://www.sublimetext.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Postman](https://www.postman.com/)
+- [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+- [JDK 11](https://adoptium.net/)
+- [SDKMAN!](https://sdkman.io/)
+
+### Notes
+
+- Jetbrains Toolbox is recommended as it:
+    - manages all Jetbrains apps in one place
+    - can update and rollback/downgrade application versions
+- JDK 11 is the version that our backend apps are running on in production.
+- SDKMAN! is installed along with 2 versions of Scala. After running the playbook, there will be a `.zshrc` file created. If `ohmyzsh` or any other plugin that creates zsh configuration is installed, please append the SDKMAN! config to the end of the new .zshrc file.
+
+Common [dotfiles](https://github.com/williamhaw/mac-dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+
+Finally, there are a few other preferences and settings added on for various apps and services.
+
+
 ### Use with a remote Mac
 
 You can use this playbook to manage other Macs as well; the playbook doesn't even need to be run from a Mac at all! If you want to manage a remote Mac, either another Mac on your network, or a hosted Mac like the ones from [MacStadium](https://www.macstadium.com), you just need to make sure you can connect to it with SSH:
@@ -100,37 +133,6 @@ dockitems_persist:
 ```
 
 Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
-
-## Included Applications / Configuration (Default)
-
-Take a look at `homebrew_cask_apps` and `homebrew_installed_packages` in [default.config.yml](default.config.yml).
-
-Applications (installed with Homebrew Cask):
-
-  - [ChromeDriver](https://sites.google.com/chromium.org/driver/)
-  - [Docker](https://www.docker.com/)
-  - [Dropbox](https://www.dropbox.com/)
-  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-  - [Google Chrome](https://www.google.com/chrome/)
-  - [Homebrew](http://brew.sh/)
-  - [LICEcap](http://www.cockos.com/licecap/)
-  - [Slack](https://slack.com/)
-  - [Sublime Text](https://www.sublimetext.com/)
-  - [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/)
-  - [JDK 11](https://adoptium.net/)
-  - [SDKMAN!](https://sdkman.io/)
-
-### Notes
-
-  - Jetbrains Toolbox is recommended as it:
-    - manages all Jetbrains apps in one place
-    - can update and rollback/downgrade application versions
-  - JDK 11 is the version that our backend apps are running on in production.
-  - SDKMAN! is installed along with 2 versions of Scala. After running the playbook, there will be a `.zshrc` file created. If `ohmyzsh` or any other plugin that creates zsh configuration is installed, please append the SDKMAN! config to the end of the new .zshrc file.
-
-Common [dotfiles](https://github.com/williamhaw/mac-dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
-
-Finally, there are a few other preferences and settings added on for various apps and services.
 
 ## Future additions
 
