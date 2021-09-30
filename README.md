@@ -56,7 +56,7 @@ Applications (installed with Homebrew Cask):
 - [Sublime Text](https://www.sublimetext.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Postman](https://www.postman.com/)
-- [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+- [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) (use to download Intellij Ultimate, PyCharm, etc)
 - [JDK 11](https://adoptium.net/)
 - [SDKMAN!](https://sdkman.io/)
 
