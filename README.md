@@ -18,7 +18,7 @@ Forked from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-de
      1. Upgrade Pip: `sudo pip3 install --upgrade pip`
      2. Install Ansible: `pip3 install ansible`
 
-  3. Clone or download this repository to your local drive.
+  3. Clone (use HTTPS as no setup is needed to clone) or download this repository to your local drive.
   4. Run the following command inside this directory to install required Ansible roles.
    ```
    $HOME/Library/Python/3.8/bin/ansible-galaxy install -r requirements.yml
@@ -30,6 +30,15 @@ Forked from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-de
    ```
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
+
+## Manual Steps (For Now)
+
+1. Generate SSH key at `~/.ssh/id_ed25519` with ED25519 using the following command:
+   ```bash
+   ssh-keygen -t ed25519 -C "your_email@example.com" -a 128
+   ```
+2. Download and install endpoint protection software by following the instructions [here](https://endowus.atlassian.net/wiki/spaces/EN/pages/2096103502/End-point+Protection+S1#Onboarding-instructions).
+
 
 ## Included Applications / Configuration (Default)
 
@@ -61,8 +70,14 @@ Applications (installed with Homebrew Cask):
 
 Common [dotfiles](https://github.com/williamhaw/mac-dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 
-Finally, there are a few other preferences and settings added on for various apps and services.
+### Disabled Configuration
+Some extra configurations are disabled as they should be left up to personal choice:
 
+- Sublime Text customization
+- Terminal customization
+- OSX customization
+- Sudoers customization
+- Installation of extra packages from npm, pip, gem and composer.
 
 ### Use with a remote Mac
 
