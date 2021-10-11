@@ -57,6 +57,7 @@ homebrew_installed_packages:
   - jq
   - sbt
   - hashicorp/tap/vault
+  - watch
 
 homebrew_upgrade_all_packages: true
 
@@ -80,6 +81,8 @@ homebrew_cask_apps:
   - postman
   - jetbrains-toolbox
   - temurin11
+  - slack
+  - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
