@@ -7,7 +7,11 @@ Automates installation of common development tools and programs.
 Forked from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook).
 
 ## Prerequisites
-  1. OSX version should be Big Sur. (Other OSX versions are not tested)
+  1. OSX version should be one of the following (Other macOS versions are not tested):
+
+     * Big Sur
+     * Monterey
+
   2. Admin/sudo permissions for the login account running the playbook.
 
 ## Installation
@@ -68,7 +72,7 @@ Applications (installed with Homebrew Cask):
 - JDK 11 is the version that our backend apps are running on in production.
 - SDKMAN! is installed along with 2 versions of Scala. After running the playbook, there will be a `.zshrc` file created. If `ohmyzsh` or any other plugin that creates zsh configuration is installed, please append the SDKMAN! config to the end of the new .zshrc file.
 
-Common [dotfiles](https://github.com/williamhaw/mac-dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+Common [dotfiles](https://github.com/williamhaw/mac-dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in [default.config.yml](default.config.yml).
 
 ### Disabled Configuration
 Some extra configurations are disabled as they should be left up to personal choice:
@@ -156,4 +160,4 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 
 ## Testing the Playbook
 
-It's a good idea to test on a Big Sur VM in [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+It's a good idea to test on a macOS VM in [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
