@@ -59,6 +59,7 @@ homebrew_installed_packages:
   - hashicorp/tap/vault
   - watch
   - coursier/formulas/coursier
+  - cloudflared
 
 homebrew_upgrade_all_packages: true
 
